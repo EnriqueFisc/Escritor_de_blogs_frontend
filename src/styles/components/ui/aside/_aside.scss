@@ -1,0 +1,154 @@
+.aside__aside-toggle-container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.aside__toggle {
+    // background-color: red;
+    border-radius: 50%;
+    color: $secondary;
+    cursor: pointer;
+
+    transition:  0.3s ease-in;
+
+    & i {
+        padding: 5px;
+    }
+    &:hover {
+        background-color: darken($color: $primary, $amount: 15);
+    }
+}
+
+.asideHiddenToggle {
+    padding: 8px;
+    
+    transform: translate( 60px );
+    transition: 0.3s ease-out;
+
+    & i {
+        padding: 5px;
+    }
+    &:hover {
+        background-color: darken($color: $primary, $amount: 15);
+    }
+}
+.asideHidden {
+    transform: translate( -300px );
+    transition: transform 0.3s ease-out;
+}
+
+.aside__aside-user {
+    align-items: center;
+    color: $secondary;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+}
+.aside__aside-container {
+    background-color: $primary;
+    border-right: 0.1px solid rgb(223, 222, 222);
+    height: 100vh;
+    padding: 10px;
+    z-index: 20;
+
+    position: sticky;
+
+    width: 300px;
+
+    transition: all 0.3s ease-in;
+
+}
+.aside__aside-add-post {
+    align-items: center;
+    color: grey;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+    transition: background-color 0.3s ease;
+
+    
+    & i {
+        padding: 20px 0 20px 0;
+    }
+    & span {
+        padding-bottom: 20px;
+    }
+    &:hover {
+        background-color: darken($color: $primary, $amount: 5);
+    }
+    &:active {
+        transition: none !important;
+        background-color: lighten($color: $primary, $amount: 5);
+    }
+}
+.aside__aside-myPosts-span {
+    margin-top: 90px;
+    margin-bottom: 10px;
+
+    & span {
+        color: $secondary;
+        font-weight: bold;
+    }
+}
+.aside__aside-myPosts {
+    max-height: 50%;
+    overflow-y: hidden;
+    width: 100%;
+
+    transition: all 0.3s ease-in;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: lighten($color: grey, $amount: 20);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: lighten($color: grey, $amount: 30);
+    }
+    &:hover {
+        overflow-y: scroll;
+        overflow: overlay;
+    }
+}
+.aside__post-container {
+    background-color: white;
+    border-top: 0.1px solid rgb(223, 222, 222);
+    cursor: pointer;
+    padding: 10px;
+
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+        background-color: darken($color: $primary, $amount: 10);
+    }
+    &:active {
+        transition: none !important;
+        background-color: lighten($color: $primary, $amount: 5);
+    }
+}
+.aside__post-title {
+    align-items: center;
+    display: flex;
+
+    & span {
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+
+    }
+}
+.aside__post-date {
+    & span {
+        color: grey;
+    }
+}

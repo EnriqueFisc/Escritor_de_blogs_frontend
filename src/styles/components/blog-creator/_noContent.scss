@@ -1,0 +1,28 @@
+.blogCreator__blog-no-content-container {
+    align-items: center;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+
+    transition: all 0.3s ease-in;
+
+    & i {
+        color: lighten($color: grey, $amount: 30);
+    }
+}
+
+.asideIsHidden {
+    left: 300px;
+}
+
+.blogCreator__blog-no-content-title {
+    color: lighten($color: grey, $amount: 30);
+    font-weight: bold;
+
+
+}
