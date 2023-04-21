@@ -1,6 +1,6 @@
 export const fetchToken = ( endpoint, data, method = 'GET' ) => {
 
-    const url = `${ process.env.REACT_APP_API_URL }/${ endpoint }`;
+    const url = `http://localhost:5000/api/${ endpoint }`;
     const token = localStorage.getItem( 'token' ) || '';
 
     if ( method === 'GET' ) {

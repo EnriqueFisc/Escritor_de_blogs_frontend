@@ -91,7 +91,7 @@ export const LoginScreen = () => {
                                 )
                             }
                         </div>
-                        <Link to="/auth/register" className="form__form-link">¿No tienes una cuenta? Registrate</Link>
+                        <Link to="/auth/register" className="form__form-link"><span>¿No tienes una cuenta? Registrate</span></Link>
                         <button className="btn btn-primary btn-block">Iniciar sesión</button>
                     </form>
                 </div>

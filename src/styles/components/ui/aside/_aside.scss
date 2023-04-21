@@ -21,8 +21,8 @@
 }
 
 .asideHiddenToggle {
+    color: $primary;
     padding: 8px;
-    
     transform: translate( 60px );
     transition: 0.3s ease-out;
 
@@ -30,7 +30,7 @@
         padding: 5px;
     }
     &:hover {
-        background-color: darken($color: $primary, $amount: 15);
+        background-color: darken($color: $secondary, $amount: 15);
     }
 }
 .asideHidden {
@@ -47,7 +47,7 @@
 }
 .aside__aside-container {
     background-color: $primary;
-    border-right: 0.1px solid rgb(223, 222, 222);
+    // border-right: 0.1px solid rgb(223, 222, 222);
     height: 100vh;
     padding: 10px;
     z-index: 20;
@@ -118,8 +118,7 @@
     }
 }
 .aside__post-container {
-    background-color: white;
-    border-top: 0.1px solid rgb(223, 222, 222);
+    background-color: $primary;
     cursor: pointer;
     padding: 10px;
 
@@ -136,6 +135,7 @@
 .aside__post-title {
     align-items: center;
     display: flex;
+    color: $secondary;
 
     & span {
         font-weight: bold;

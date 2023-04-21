@@ -2,7 +2,7 @@
 
 export const fetchTokenLess = async( endpoint, data, method = 'GET' ) => {
     
-    const url = `${ process.env.REACT_APP_API_URL }/${ endpoint }`
+    const url = `http://localhost:5000/api/${ endpoint }`
 
     if ( method === 'GET' ) {
         return  fetch( url );

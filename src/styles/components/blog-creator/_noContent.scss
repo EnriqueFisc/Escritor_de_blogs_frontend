@@ -1,18 +1,17 @@
 .blogCreator__blog-no-content-container {
     align-items: center;
-    background-color: $primary;
+    background-color: $secondary;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: absolute;
     height: 100%;
+    justify-content: center;
     left: 0;
+    position: absolute;
     right: 0;
-
     transition: all 0.3s ease-in;
 
     & i {
-        color: lighten($color: grey, $amount: 30);
+        color: lighten($color: $primary, $amount: 30);
     }
 }
 
@@ -21,8 +20,6 @@
 }
 
 .blogCreator__blog-no-content-title {
-    color: lighten($color: grey, $amount: 30);
+    color: lighten($color: $primary, $amount: 30);
     font-weight: bold;
-
-
 }

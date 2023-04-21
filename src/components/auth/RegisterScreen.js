@@ -149,7 +149,7 @@ export const RegisterScreen = () => {
                                 : ( <i onClick={ handleTurnViewConfirmPass } className="fas fa-eye form-icon-eye"></i> )
                             }
                         </div>
-                        <Link to="/auth/login" className="form__form-link">¿Ya tienes una cuenta? Inicia sesión</Link>
+                        <Link to="/auth/login" className="form__form-link"><span>¿Ya tienes una cuenta? Inicia sesión</span></Link>
                         <button className="btn btn-primary btn-block">Registrarse</button>
                     </form>
                 </div>
