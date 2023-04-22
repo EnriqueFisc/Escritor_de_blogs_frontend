@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 
 export const PublicRoutes = ({
     isAuthenticated,
@@ -10,9 +10,9 @@ export const PublicRoutes = ({
     // console.log(isAuthenticated);
     return (
         <Route { ...rest }
-            component={ ( props ) => (
+            element={ ( props ) => (
                 ( isAuthenticated ) ?
-                (<Redirect to="/" />)
+                (<Navigate to="/" />)
                 :
                 (<Component { ...props } />)
             )}

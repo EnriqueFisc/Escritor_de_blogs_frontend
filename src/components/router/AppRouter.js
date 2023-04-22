@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Redirect,
+    BrowserRouter,
+    Routes,
+    Route,
+    Navigate,
 } from "react-router-dom";
 import { setCheckingFinish, startChecking } from '../../actions/auth';
-import { LoginScreen } from '../auth/LoginScreen';
-import { RegisterScreen } from '../auth/RegisterScreen';
-import { BlogCreator } from '../blog-creator/BlogCreator';
 import { LoadingScreen } from '../ui/loading/LoadingScreen';
-import { PrivateRoutes } from './PrivateRoutes';
-import { PublicRoutes } from './PublicRoutes';
+import { LoginCheckAuth } from './LoginCheckAuth';
+import { RegisterCheckAuth } from './RegisterCheckAuth';
+import { BlogEditorCheckAuth } from './BlogEditorCheckAuth';
 
 
 export const AppRouter = () => {
@@ -36,31 +35,25 @@ export const AppRouter = () => {
     }
 
     return (
-        <Router>
+        <BrowserRouter>
             <main>
-                <Switch>
-                    <PublicRoutes 
-                        exact 
-                        path="/auth/login" 
-                        component={ LoginScreen } 
-                        isAuthenticated={ !!uid }
+                <Routes>
+                    <Route  
+                        path="auth/login" 
+                        element={ <LoginCheckAuth uid={ uid }/> }
                     />
-                    <PrivateRoutes 
-                        exact 
-                        path="/" 
-                        component={ BlogCreator } 
-                        isAuthenticated={ !!uid  }
+                    <Route 
+                        path="auth/register" 
+                        element={ <RegisterCheckAuth uid={ uid }/>}
                     />
-                    <PublicRoutes 
-                        exact 
-                        path="/auth/register" 
-                        component={ RegisterScreen } 
-                        isAuthenticated={ !!uid  }
+                    <Route 
+                        path="blog" 
+                        element={ <BlogEditorCheckAuth uid={ uid }/> }
                     />
-                    <Redirect to="/" />
-                </Switch>
+                    <Route path="*" element={ <Navigate to='/blog'/> } />
+                </Routes>
 
             </main>
-        </Router>
+        </BrowserRouter>
     )
 }
