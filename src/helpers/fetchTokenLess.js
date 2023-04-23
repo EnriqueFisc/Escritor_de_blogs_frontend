@@ -2,7 +2,7 @@
 
 export const fetchTokenLess = async( endpoint, data, method = 'GET' ) => {
     
-    const url = `http://localhost:5000/api/${ endpoint }`
+    const url = `http://167.71.17.236:3000/api/${ endpoint }`
 
     if ( method === 'GET' ) {
         return  fetch( url );
