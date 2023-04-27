@@ -1,6 +1,6 @@
 export const fetchToken = ( endpoint, data, method = 'GET' ) => {
 
-    const url = `http://167.71.17.236:3000/api/${ endpoint }`;
+    const url = `https://enriquefisc.cyou/api/${ endpoint }`;
     const token = localStorage.getItem( 'token' ) || '';
 
     if ( method === 'GET' ) {
